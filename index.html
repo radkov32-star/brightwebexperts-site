@@ -3,19 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Web Experts | Professional Web Design</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bright Web Experts | Premium Web Design</title>
+    <style>
+        /* ПЪЛЕН ДИЗАЙН, ВГРАДЕН ДИРЕКТНО ТУК */
+        :root { --primary: #007bff; --dark: #1a1a1a; --light: #f4f4f4; --orange: #ff9800; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; margin: 0; color: #333; background-color: var(--light); }
+        .container { width: 90%; max-width: 1100px; margin: auto; overflow: hidden; padding: 0 20px; }
+        
+        header { background: var(--dark); color: #fff; padding: 20px 0; border-bottom: var(--primary) 3px solid; }
+        .logo { font-size: 28px; font-weight: bold; float: left; }
+        .logo span { color: var(--primary); }
+        nav { float: right; margin-top: 10px; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: bold; }
+
+        #hero { background: #fff; padding: 80px 0; text-align: center; border-bottom: 1px solid #ddd; }
+        #hero h1 { font-size: 48px; margin-bottom: 10px; color: var(--dark); }
+        #hero p { font-size: 20px; color: #666; }
+
+        .pricing { padding: 60px 0; }
+        .section-title { text-align: center; font-size: 36px; margin-bottom: 40px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .pricing-card { background: #fff; padding: 40px 20px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; position: relative; border-top: 6px solid var(--primary); transition: 0.3s; }
+        .pricing-card:hover { transform: translateY(-10px); }
+        .pricing-card.highlighted { border-top: 6px solid var(--orange); }
+        .badge { background: var(--orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); }
+        
+        .price { font-size: 40px; font-weight: bold; margin: 20px 0; color: var(--dark); }
+        .pricing-card ul { list-style: none; padding: 0; margin: 20px 0; text-align: left; }
+        .pricing-card li { padding: 10px 0; border-bottom: 1px solid #eee; }
+        .pricing-card li:before { content: "✓ "; color: var(--primary); font-weight: bold; }
+
+        .btn { display: inline-block; background: var(--primary); color: #fff; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+        .btn-orange { background: var(--orange); }
+        .btn:hover { opacity: 0.8; }
+
+        footer { background: var(--dark); color: #fff; text-align: center; padding: 40px 0; margin-top: 40px; }
+    </style>
 </head>
 <body>
 
 <header>
-    <nav class="container">
+    <div class="container">
         <div class="logo">BrightWeb<span>Experts</span></div>
-        <ul>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="mailto:radkov32@gmail.com">Contact</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <a href="#pricing">Pricing</a>
+            <a href="mailto:radkov32@gmail.com">Contact</a>
+        </nav>
+    </div>
 </header>
 
 <section id="hero">
@@ -25,59 +60,53 @@
     </div>
 </section>
 
-<section id="pricing" class="pricing">
-    <div class="container">
-        <h2 class="section-title">Pricing Plans</h2>
-        <div class="pricing-grid">
-            
-            <div class="pricing-card">
-                <h3>Starter</h3>
-                <p class="price">£399</p>
-                <ul>
-                    <li>Custom Responsive Design</li>
-                    <li>Fast Loading Speed</li>
-                    <li>SEO Ready (Google Optimized)</li>
-                    <li>Secure Hosting Setup</li>
-                    <li>1 Month of Technical Support</li>
-                </ul>
-                <a href="mailto:radkov32@gmail.com?subject=Inquiry for Starter Plan (£399)" class="btn">Get Started</a>
-            </div>
+<section id="pricing" class="container">
+    <h2 class="section-title">Pricing Plans</h2>
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3>Starter</h3>
+            <p class="price">£399</p>
+            <ul>
+                <li>Custom Responsive Design</li>
+                <li>Fast Loading Speed</li>
+                <li>SEO Ready (Google Optimized)</li>
+                <li>Secure Hosting Setup</li>
+            </ul>
+            <a href="mailto:radkov32@gmail.com?subject=Inquiry: Starter Plan (£399)" class="btn">Get Started</a>
+        </div>
 
-            <div class="pricing-card highlighted">
-                <div class="badge">Most Popular</div>
-                <h3>Professional</h3>
-                <p class="price">£1,199</p>
-                <ul>
-                    <li>Up to 5 Custom Pages</li>
-                    <li>Advanced UI/UX Design</li>
-                    <li>Full SEO & Keywords Setup</li>
-                    <li>Contact Forms & Maps</li>
-                    <li>3 Months of Priority Support</li>
-                </ul>
-                <a href="mailto:radkov32@gmail.com?subject=Inquiry for Professional Plan (£1,199)" class="btn">Choose Professional</a>
-            </div>
+        <div class="pricing-card highlighted">
+            <div class="badge">Most Popular</div>
+            <h3>Professional</h3>
+            <p class="price">£1,199</p>
+            <ul>
+                <li>Up to 5 Custom Pages</li>
+                <li>Advanced UI/UX Design</li>
+                <li>Full SEO & Keywords Setup</li>
+                <li>3 Months of Priority Support</li>
+            </ul>
+            <a href="mailto:radkov32@gmail.com?subject=Inquiry: Professional Plan (£1,199)" class="btn btn-orange">Choose Professional</a>
+        </div>
 
-            <div class="pricing-card">
-                <h3>Enterprise</h3>
-                <p class="price">£2,199</p>
-                <ul>
-                    <li>E-commerce / Custom System</li>
-                    <li>Unlimited Pages</li>
-                    <li>Premium Branding & Graphics</li>
-                    <li>Speed & Security Optimization</li>
-                    <li>12 Months Maintenance</li>
-                </ul>
-                <a href="mailto:radkov32@gmail.com?subject=Inquiry for Enterprise Plan (£2,199)" class="btn">Contact for Details</a>
-            </div>
-
+        <div class="pricing-card">
+            <h3>Enterprise</h3>
+            <p class="price">£2,199</p>
+            <ul>
+                <li>E-commerce / Custom System</li>
+                <li>Unlimited Pages</li>
+                <li>Premium Branding & Graphics</li>
+                <li>12 Months Maintenance</li>
+            </ul>
+            <a href="mailto:radkov32@gmail.com?subject=Inquiry: Enterprise Plan (£2,199)" class="btn">Contact Details</a>
         </div>
     </div>
 </section>
 
-<footer style="text-align: center; padding: 40px 0; background: #1a1a1a; color: white;">
+<footer>
     <div class="container">
         <p>&copy; 2026 Bright Web Experts. All rights reserved.</p>
-        <p>Secure Payments via Revolut & PayPal</p>
+        <p>Contact: radkov32@gmail.com</p>
+        <p><strong>Secure Payments via Revolut & PayPal</strong></p>
     </div>
 </footer>
 
