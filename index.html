@@ -3,127 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrightWebExperts | Premium Web Design</title>
+    <title>BrightWebExperts | Premium Web Solutions UK</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .gradient-text {
-            background: linear-gradient(90deg, #3b82f6, #2563eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .pricing-card { transition: all 0.3s ease; }
-        .pricing-card:hover { transform: translateY(-10px); }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e3a8a 0%, #0f172a 100%); }
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-blur: 5px; }
+        .modal-content { background-color: #fff; margin: 5% auto; padding: 40px; border-radius: 20px; width: 80%; max-width: 800px; max-height: 80vh; overflow-y: auto; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <nav class="bg-slate-900 text-white py-4 px-6 sticky top-0 z-50 shadow-lg">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-2xl font-800 tracking-tighter uppercase italic">
-                BrightWeb<span class="text-blue-500 font-black">Experts</span>
-            </div>
-            <div class="flex space-x-6 font-medium">
-                <a href="#pricing" class="hover:text-blue-400 transition text-sm">Pricing</a>
-                <a href="#contact" class="hover:text-blue-400 transition text-sm border border-blue-500 px-3 py-1 rounded-lg">Hire Us</a>
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-bold tracking-tighter text-white uppercase italic">BrightWebExperts</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#process" class="hover:text-blue-400 transition">Process</a>
+                <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition font-bold">Get Started</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative overflow-hidden bg-white pt-12 pb-24 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-600 text-xs font-bold mb-6 tracking-widest uppercase">
-                    Premium Web Solutions
-                </span>
-                <h1 class="text-5xl md:text-7xl font-800 leading-tight mb-6 tracking-tight text-slate-900">
-                    High-End Websites <br><span class="gradient-text italic">That Deliver.</span>
-                </h1>
-                <p class="text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
-                    We don't just build websites; we create digital experiences that scale your business.
-                </p>
-                <a href="#pricing" class="inline-block bg-blue-600 text-white px-8 py-5 rounded-2xl font-bold text-center hover:bg-blue-700 transition shadow-xl shadow-blue-200 text-lg">
-                    Check Our Prices
-                </a>
-            </div>
-            <div class="relative">
-                <div class="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-slate-900">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80" alt="Premium Design" class="w-full">
-                </div>
-                <div class="absolute -top-10 -right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+    <section class="hero-gradient pt-40 pb-24 px-6 text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">High-end websites for <span class="text-blue-400">ambitious brands.</span></h1>
+            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">We bridge the gap between "DIY" sites and overpriced agencies. Premium design, transparent pricing, UK-based expertise.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 font-bold">
+                <a href="#pricing" class="bg-white text-slate-900 px-8 py-4 rounded-xl hover:bg-slate-100 transition shadow-lg">View Our Tiers</a>
+                <a href="#contact" class="border border-slate-700 px-8 py-4 rounded-xl hover:bg-slate-800 transition">Book a Consultation</a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <section id="pricing" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight text-slate-900">Investment Plans</h2>
-            <p class="text-slate-500 mb-16 max-w-2xl mx-auto">Scale your business with our professional web development packages.</p>
-            
+    <section class="py-20 px-6 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+            <div class="text-center group">
+                <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"><i class="fa-solid fa-bolt"></i></div>
+                <h4 class="font-bold mb-2 uppercase text-xs tracking-widest">Performance</h4>
+                <p class="text-sm text-slate-500 italic">Ultra-fast loading speeds.</p>
+            </div>
+            <div class="text-center group">
+                <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"><i class="fa-solid fa-mobile-screen"></i></div>
+                <h4 class="font-bold mb-2 uppercase text-xs tracking-widest">Responsive</h4>
+                <p class="text-sm text-slate-500 italic">Perfect on all devices.</p>
+            </div>
+            <div class="text-center group">
+                <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h4 class="font-bold mb-2 uppercase text-xs tracking-widest">SEO Ready</h4>
+                <p class="text-sm text-slate-500 italic">Built to be found on Google.</p>
+            </div>
+            <div class="text-center group">
+                <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 mx-auto group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"><i class="fa-solid fa-lock"></i></div>
+                <h4 class="font-bold mb-2 uppercase text-xs tracking-widest">Secure</h4>
+                <p class="text-sm text-slate-500 italic">Top-tier security standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 px-6 bg-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 italic leading-tight">Pricing Tiers</h2>
+            <p class="text-center text-slate-500 mb-16">No hidden fees. No surprises.</p>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="pricing-card bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-200">
-                    <h3 class="text-lg font-bold text-slate-400 uppercase tracking-widest mb-2">Essential</h3>
-                    <div class="text-5xl font-black mb-6 italic">£349</div>
-                    <ul class="text-slate-600 text-left space-y-4 mb-10 font-medium">
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> 1 High-Conversion Page</li>
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Mobile Optimized</li>
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> SSL Certificate Setup</li>
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> 48h Delivery</li>
+                <div class="bg-white p-10 rounded-3xl border border-slate-200 flex flex-col shadow-sm">
+                    <h3 class="text-lg font-bold mb-2 uppercase tracking-tight">Essential</h3>
+                    <div class="text-4xl font-bold mb-8">£349</div>
+                    <ul class="space-y-4 mb-10 text-slate-600 text-sm flex-grow">
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Single Page Design</li>
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Performance Optimized</li>
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Contact Form</li>
                     </ul>
-                    <a href="#contact" class="block w-full py-4 text-center border-2 border-slate-900 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition-all">Get Started</a>
+                    <a href="#contact" class="w-full py-4 text-center border-2 border-slate-900 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition uppercase text-xs">Get Started</a>
                 </div>
-
-                <div class="pricing-card bg-slate-900 p-10 rounded-[2.5rem] shadow-2xl border-2 border-blue-500 relative transform md:scale-105 z-20 text-white">
-                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-1.5 rounded-full text-xs font-black uppercase tracking-widest">Recommended</div>
-                    <h3 class="text-lg font-bold text-blue-400 uppercase tracking-widest mb-2">Professional</h3>
-                    <div class="text-5xl font-black mb-6 italic">£899</div>
-                    <ul class="text-slate-300 text-left space-y-4 mb-10 font-medium">
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Up to 5 Custom Pages</li>
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Professional UI/UX</li>
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Lead Gen Forms</li>
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> SEO Foundation</li>
+                <div class="bg-slate-900 p-10 rounded-3xl border-2 border-blue-500 text-white flex flex-col shadow-2xl md:-translate-y-4">
+                    <div class="bg-blue-600 text-[10px] font-bold py-1 px-3 rounded-full w-fit mb-4 uppercase tracking-tighter">Most Recommended</div>
+                    <h3 class="text-lg font-bold mb-2 uppercase tracking-tight">Professional</h3>
+                    <div class="text-4xl font-bold mb-8 text-blue-400">£899</div>
+                    <ul class="space-y-4 mb-10 text-slate-300 text-sm flex-grow">
+                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i> Up to 5 Pages</li>
+                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i> Custom Visual Identity</li>
+                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i> Full SEO Strategy</li>
+                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i> 30 Days Support</li>
                     </ul>
-                    <a href="#contact" class="block w-full py-4 text-center bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-500 transition-all shadow-lg shadow-blue-900">Scale Business</a>
+                    <a href="#contact" class="w-full py-4 text-center bg-blue-600 rounded-xl font-bold hover:bg-blue-700 transition uppercase text-xs tracking-widest shadow-xl shadow-blue-900/20">Hire Us</a>
                 </div>
-
-                <div class="pricing-card bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-200">
-                    <h3 class="text-lg font-bold text-slate-400 uppercase tracking-widest mb-2">Enterprise</h3>
-                    <div class="text-5xl font-black mb-6 italic">£2499</div>
-                    <ul class="text-slate-600 text-left space-y-4 mb-10 font-medium">
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Custom Web Application</li>
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Advanced E-commerce</li>
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Marketing Automation</li>
-                        <li class="flex items-center"><span class="text-blue-500 mr-2">✓</span> Dedicated Support</li>
+                <div class="bg-white p-10 rounded-3xl border border-slate-200 flex flex-col shadow-sm">
+                    <h3 class="text-lg font-bold mb-2 uppercase tracking-tight">Enterprise</h3>
+                    <div class="text-4xl font-bold mb-8">£2,499</div>
+                    <ul class="space-y-4 mb-10 text-slate-600 text-sm flex-grow">
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Bespoke Functionality</li>
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> E-commerce Integration</li>
+                        <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Advanced UI/UX</li>
                     </ul>
-                    <a href="#contact" class="block w-full py-4 text-center border-2 border-slate-900 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition-all">Go Enterprise</a>
+                    <a href="#contact" class="w-full py-4 text-center border-2 border-slate-900 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition uppercase text-xs">Inquire</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-black mb-12 tracking-tight uppercase italic text-slate-900">Start Your Journey</h2>
-            <form action="https://formspree.io/f/xvgrvqqb" method="POST" class="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-200 shadow-xl">
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <input type="text" name="name" required placeholder="Name" class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 outline-none transition-all">
-                    <input type="email" name="email" required placeholder="Email" class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 outline-none transition-all">
-                </div>
-                <textarea name="message" rows="4" required placeholder="Tell us about your goals..." class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-blue-500 outline-none transition-all mb-8"></textarea>
-                <button type="submit" class="w-full bg-slate-900 text-white font-black py-5 rounded-2xl hover:bg-blue-600 transition-all text-lg shadow-lg">
-                    SUBMIT REQUEST
-                </button>
-            </form>
+    <footer class="bg-slate-900 text-slate-400 py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="text-white font-bold text-2xl mb-4 italic tracking-tighter">BrightWebExperts</div>
+            <p class="text-sm mb-8 max-w-md mx-auto italic">Providing premium digital experiences for small businesses across the United Kingdom.</p>
+            <div class="flex flex-wrap justify-center gap-6 text-xs mb-10">
+                <button onclick="openModal('privacy')" class="underline hover:text-white">Privacy Policy</button>
+                <button onclick="openModal('terms')" class="underline hover:text-white">Terms of Service</button>
+                <a href="#contact" class="underline hover:text-white">Contact Support</a>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-[10px] uppercase tracking-widest">
+                © 2026 BrightWebExperts. All rights reserved.<br>
+                BrightWebExperts is a Sole Trader business operating in the United Kingdom.
+            </div>
         </div>
-    </section>
-
-    <footer class="py-12 bg-slate-900 text-center text-slate-500">
-        <div class="text-xl font-800 text-white mb-4 uppercase italic tracking-tighter">
-            BrightWeb<span class="text-blue-500 font-black">Experts</span>
-        </div>
-        <p class="text-xs tracking-widest uppercase">&copy; 2026 BrightWebExperts. All rights reserved.</p>
     </footer>
+
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <h2 class="text-2xl font-bold mb-6">Privacy Policy</h2>
+            <div class="text-sm text-slate-600 space-y-4">
+                <p><strong>1. Introduction:</strong> BrightWebExperts ("we", "us") respects your privacy and is committed to protecting your personal data in accordance with the UK GDPR.</p>
+                <p><strong>2. Data Collection:</strong> We collect information you provide via our contact forms (Name, Email, Project Details) only to provide our services.</p>
+                <p><strong>3. Use of Data:</strong> Your data is used strictly for communication and project management. We never sell your data to third parties.</p>
+                <p><strong>4. Cookies:</strong> We use basic cookies to analyze website traffic and improve your browsing experience.</p>
+                <p><strong>5. Your Rights:</strong> You have the right to request access, correction, or deletion of your personal data at any time.</p>
+                <p><strong>Contact:</strong> For any privacy concerns, contact us via the website form.</p>
+            </div>
+            <button onclick="closeModal('privacy')" class="mt-8 bg-slate-900 text-white px-6 py-2 rounded-lg font-bold text-xs uppercase">Close</button>
+        </div>
+    </div>
+
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 bg-slate-900 text-white p-4 rounded-xl border border-slate-700 shadow-2xl flex flex-col md:flex-row items-center justify-between z-[2000]">
+        <p class="text-[10px] md:text-xs">We use cookies to improve your experience. By continuing, you agree to our <button onclick="openModal('privacy')" class="underline">Privacy Policy</button>.</p>
+        <button onclick="document.getElementById('cookie-banner').style.display='none'" class="bg-blue-600 text-[10px] font-bold px-4 py-2 rounded-lg mt-2 md:mt-0 uppercase">Accept</button>
+    </div>
+
+    <script>
+        function openModal(type) { document.getElementById(type + '-modal').style.display = 'block'; }
+        function closeModal(type) { document.getElementById(type + '-modal').style.display = 'none'; }
+        window.onclick = function(event) { if (event.target.className === 'modal') { event.target.style.display = 'none'; } }
+    </script>
 
 </body>
 </html>
